@@ -1,1 +1,1 @@
-{ pkgs, ... }: { programs.rofi.enable = true; }
+{ pkgs, ... }: { programs.rofi = { enable = true; }; }
