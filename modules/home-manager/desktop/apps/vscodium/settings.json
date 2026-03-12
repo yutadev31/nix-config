@@ -1,0 +1,78 @@
+{
+  "$schema": "vscode://schemas/settings/user",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Ink & Frost",
+  "editor.fontFamily": "Hack Nerd Font",
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.insertSpaces": true,
+  "editor.autoIndentOnPaste": true,
+  "editor.unfoldOnClickAfterEndOfLine": true,
+  "editor.renderControlCharacters": true,
+  "editor.suggestSelection": "first",
+  "breadcrumbs.enabled": true,
+  "files.insertFinalNewline": true,
+  "workbench.editor.empty.hint": "hidden",
+  "terminal.integrated.suggest.enabled": false,
+  "terminal.integrated.sendKeybindingsToShell": true,
+  "terminal.integrated.stickyScroll.enabled": false,
+  "git.autofetch": true,
+  "git.blame.editorDecoration.enabled": true,
+  "git.confirmSync": false,
+  "editor.linkedEditing": true,
+  "html.autoClosingTags": true,
+  "javascript.autoClosingTags": true,
+  "typescript.autoClosingTags": true,
+  "svelte.enable-ts-plugin": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "[rust]": {
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[dockercompose]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
+  },
+  "[dart]": {
+    "editor.selectionHighlight": false,
+    "editor.wordBasedSuggestions": "off"
+  }
+}

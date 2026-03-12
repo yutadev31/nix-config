@@ -1,0 +1,6 @@
+#!/bin/sh
+set -eu
+nix flake show
+if [ -n "${HOSTNAME:-}" ]; then
+  echo "HOSTNAME=${HOSTNAME}"
+fi

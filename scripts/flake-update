@@ -1,0 +1,3 @@
+#!/bin/sh
+set -eu
+nix flake update

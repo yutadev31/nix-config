@@ -1,0 +1,137 @@
+{
+  "nodes": {
+    "flake-utils": {
+      "inputs": {
+        "systems": "systems"
+      },
+      "locked": {
+        "lastModified": 1731533236,
+        "narHash": "sha256-l0KFg5HjrsfsO/JpG+r7fRrqm12kzFHyUHqHCVpMMbI=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "11707dc2f618dd54ca8739b309ec4fc024de578b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "home-manager": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1773179137,
+        "narHash": "sha256-EdW2bwzlfme0vbMOcStnNmKlOAA05Bp6su2O8VLGT0k=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "3f98e2bbc661ec0aaf558d8a283d6955f05f1d09",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "ink-and-frost-vscode": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1773302226,
+        "narHash": "sha256-bLU7Ac/z++nQutB0kZsmrJsycMC93Yj2b8g5TABMlsA=",
+        "owner": "yutadev31",
+        "repo": "ink-and-frost-vscode",
+        "rev": "d6d8fba4efd15b0e4d0e2dc8994217d07757c2ac",
+        "type": "github"
+      },
+      "original": {
+        "owner": "yutadev31",
+        "repo": "ink-and-frost-vscode",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1773301463,
+        "narHash": "sha256-1VeXISPIvbsLfGulGG5CvSsgVWryDyVEIkX/h0PA+TA=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "28468fd96b9807a6b3d4606f7c13276e2aa5b2aa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1772963539,
+        "narHash": "sha256-9jVDGZnvCckTGdYT53d/EfznygLskyLQXYwJLKMPsZs=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "9dcb002ca1690658be4a04645215baea8b95f31d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "home-manager": "home-manager",
+        "ink-and-frost-vscode": "ink-and-frost-vscode",
+        "nixpkgs": "nixpkgs_2",
+        "rust-overlay": "rust-overlay"
+      }
+    },
+    "rust-overlay": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1773198218,
+        "narHash": "sha256-sxQV16GQrBEfrwuhYT9WvmFBnN8HakhRfR+JR+3qaTo=",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "e552b1d2850f5f0a739bba27c6463af1a29e2f4e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
+    "systems": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

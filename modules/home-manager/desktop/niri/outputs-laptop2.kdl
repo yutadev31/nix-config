@@ -1,0 +1,11 @@
+output "eDP-1" {
+    mode "1920x1200@60.003"
+    transform "normal"
+    position x=0 y=1080
+}
+
+output "HDMI-A-1" {
+    mode "1920x1080@59.934"
+    transform "normal"
+    position x=0 y=0
+}

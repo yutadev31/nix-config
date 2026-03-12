@@ -1,0 +1,8 @@
+#!/bin/sh
+set -eu
+host="${1:-${HOSTNAME:-}}"
+if [ -z "$host" ]; then
+  echo "HOSTNAME is not set and no host argument provided." >&2
+  exit 1
+fi
+home-manager build --flake ".#${host}"

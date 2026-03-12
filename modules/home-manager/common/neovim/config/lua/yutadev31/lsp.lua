@@ -1,0 +1,17 @@
+vim.lsp.enable({
+  "astro",
+  "bashls",
+  "clangd",
+  "cssls",
+  "docker_language_server",
+  "fish_lsp",
+  "html",
+  "jsonls",
+  "lua_ls",
+  "pyright",
+  "rust_analyzer",
+  "ts_ls",
+  "nil_ls",
+  "mesonlsp",
+  "hls",
+})

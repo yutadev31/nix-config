@@ -1,0 +1,34 @@
+* {
+  font-family: "Hack Nerd Font", FontAwesome, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+window#waybar {
+  background-color: @bg@;
+  border-bottom: 1px solid @selection@;
+  color: @fg@;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+label.module,
+box.module {
+  padding: 4px 4px;
+}
+
+#workspaces button {
+  padding: 0 4px;
+  margin: 0 2px;
+  border: none;
+  color: @fg@;
+  transition-property: color;
+  transition-duration: 0.1s;
+}
+
+#workspaces button.focused,
+#workspaces button.active {
+  color: @blue@;
+}
