@@ -53,10 +53,10 @@ in
         # Chinese
         "Groups/2" = {
           Name = "Chinese";
-          "Default Layout" = "jp";
+          "Default Layout" = "cn";
           DefaultIM = "pinyin";
         };
-        "Groups/2/Items/0".Name = "keyboard-jp";
+        "Groups/2/Items/0".Name = "keyboard-cn";
         "Groups/2/Items/1".Name = "pinyin";
       };
       addons = {
