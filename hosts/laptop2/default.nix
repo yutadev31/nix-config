@@ -10,6 +10,7 @@
     ../../modules/nixos/desktop/greetd.nix
     ../../modules/nixos/desktop/niri.nix
     ../../modules/nixos/dev/docker.nix
+    ../../modules/nixos/dev/ollama.nix
   ];
 
   # Network
