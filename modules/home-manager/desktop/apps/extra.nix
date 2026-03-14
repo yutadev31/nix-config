@@ -31,7 +31,7 @@ in
 {
   home.packages = with pkgs; [
     discord-ptb
-    discord-canary
+    # discord-canary
     vlc
     zed-editor
     gimp
@@ -39,10 +39,10 @@ in
     qgis
     logseq
     voicevox
-    zrythm
-    qjackctl
+    # zrythm
+    # qjackctl
     kdePackages.kdenlive
-    blender
+    # blender
   ];
 
   programs.firefox = {
