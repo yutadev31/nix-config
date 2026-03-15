@@ -1,7 +1,7 @@
 {
   "$schema": "vscode://schemas/settings/user",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Ink & Frost",
+  "workbench.colorTheme": "GitHub Dark Default",
   "editor.fontFamily": "Hack Nerd Font",
   "editor.tabSize": 2,
   "editor.formatOnSave": true,

@@ -38,6 +38,7 @@
         haskell.haskell
         justusadam.language-haskell
         dbaeumer.vscode-eslint
+        ms-vscode.cmake-tools
 
         Google.gemini-cli-vscode-ide-companion
 
