@@ -43,6 +43,7 @@ in
     # qjackctl
     kdePackages.kdenlive
     # blender
+    jetbrains.idea
   ];
 
   programs.firefox = {
