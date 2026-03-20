@@ -23,8 +23,8 @@ in
       globalOptions = {
         Hotkey = {
           "TriggerKeys/0" = "Zenkaku_Hankaku";
-          "EnumerateGroupForwardKeys/0" = "Henkan";
-          "EnumerateGroupBackwardKeys/0" = "Shift+Henkan";
+          "EnumerateGroupForwardKeys/0" = "Muhenkan";
+          "EnumerateGroupBackwardKeys/0" = "Shift+Muhenkan";
         };
       };
       inputMethod = {

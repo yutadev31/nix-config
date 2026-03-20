@@ -7,56 +7,56 @@
     nil
     nixfmt
 
-    # Docker
-    docker-language-server
+    # # Docker
+    # docker-language-server
 
-    # JSON
-    vscode-json-languageserver
+    # # JSON
+    # vscode-json-languageserver
 
-    # TOML
-    taplo
+    # # TOML
+    # taplo
 
-    # YAML
-    yaml-language-server
+    # # YAML
+    # yaml-language-server
 
-    # Lua
-    stylua
+    # # Lua
+    # stylua
 
-    # C/C++
-    gcc
-    clang-tools
-    mesonlsp
+    # # C/C++
+    # gcc
+    # clang-tools
+    # mesonlsp
 
-    # Java Script
-    nodejs
-    pnpm
+    # # Java Script
+    # nodejs
+    # pnpm
     bun
-    typescript-language-server
-    tailwindcss-language-server
-    astro-language-server
-    vscode-css-languageserver
+    # typescript-language-server
+    # tailwindcss-language-server
+    # astro-language-server
+    # vscode-css-languageserver
 
-    # Python
+    # # Python
     python3
-    uv
-    pyright
+    # uv
+    # pyright
 
-    # Rust
+    # # Rust
     (rust-bin.stable.latest.default.override {
       extensions = [ "rust-src" ];
     })
 
-    # Go
-    go
+    # # Go
+    # go
 
-    # Dart (Flutter)
-    flutter
+    # # Dart (Flutter)
+    # flutter
 
-    # Haskell
-    haskellPackages.stack
-    haskellPackages.ghc
-    haskellPackages.haskell-language-server
-    haskellPackages.hlint
-    haskellPackages.ormolu
+    # # Haskell
+    # haskellPackages.stack
+    # haskellPackages.ghc
+    # haskellPackages.haskell-language-server
+    # haskellPackages.hlint
+    # haskellPackages.ormolu
   ];
 }

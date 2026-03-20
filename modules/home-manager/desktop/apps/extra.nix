@@ -36,12 +36,11 @@ in
     zed-editor
     gimp
     inkscape
-    qgis
-    logseq
-    voicevox
+    # qgis
+    # logseq
+    # voicevox
     # zrythm
-    # qjackctl
-    kdePackages.kdenlive
+    # kdePackages.kdenlive
     # blender
     jetbrains.idea
   ];

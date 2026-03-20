@@ -7,7 +7,6 @@
 {
   imports = [
     ./alacritty.nix
-    ./swayimg
     ./vscodium
   ]
   ++ lib.optional extraApps ./extra.nix;

@@ -3,12 +3,12 @@
   home.packages = with pkgs; [
     gemini-cli
     codex
-    gping
-    onefetch
-    zellij
-    helix
-    nodePackages.cspell
-    delta
+    # gping
+    # onefetch
+    # zellij
+    # helix
+    # nodePackages.cspell
+    # delta
   ];
 
   # Bat (cat)
