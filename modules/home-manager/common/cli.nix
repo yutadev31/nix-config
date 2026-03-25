@@ -42,9 +42,8 @@
     settings = {
       user.name = "Yuta";
       user.email = "yuta256dev@gmail.com";
-      user.signingkey = "1780545869A096C7";
       init.defaultBranch = "main";
-      ghq.root = "~/dev";
+      user.signingkey = "732638DCBAA59D65";
       commit.gpgsign = true;
     };
   };
