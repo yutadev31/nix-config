@@ -1,17 +1,14 @@
 * {
+  border: none;
+  border-radius: 0;
   font-family: "Hack Nerd Font", FontAwesome, sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: bold;
 }
 
-window#waybar {
-  background-color: @bg@;
-  border-bottom: 1px solid @selection@;
-  color: @fg@;
-}
-
-window#waybar.hidden {
-  opacity: 0.2;
+#waybar {
+  background: #0b0c14;
+  color: #c9ccd9;
 }
 
 label.module,
@@ -22,13 +19,9 @@ box.module {
 #workspaces button {
   padding: 0 4px;
   margin: 0 2px;
-  border: none;
-  color: @fg@;
-  transition-property: color;
-  transition-duration: 0.1s;
+  color: #c9ccd9;
 }
 
-#workspaces button.focused,
 #workspaces button.active {
-  color: @blue@;
+  color: #4d6aff;
 }

@@ -25,5 +25,6 @@
     xdg-desktop-portal-gtk
     xdg-desktop-portal-gnome
     swaybg
+    easyeffects
   ];
 }

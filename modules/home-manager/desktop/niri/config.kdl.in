@@ -73,7 +73,7 @@ layout {
         // off
 
         width 2
-        active-color "@blue@"
+        active-color "@fg@"
         inactive-color "@black@"
         urgent-color "@red@"
     }
@@ -123,7 +123,7 @@ window-rule {
 }
 
 window-rule {
-    geometry-corner-radius 8
+    geometry-corner-radius 0
     clip-to-geometry true
 }
 

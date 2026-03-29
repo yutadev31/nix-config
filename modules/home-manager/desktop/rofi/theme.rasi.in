@@ -1,11 +1,10 @@
 * {
-  bg: @bg@;
-  bg-alt: @black@;
-  bg-soft: @selection@;
-  fg: @fg@;
-  fg-muted: @white@;
-  blue: @blue@;
-  red: @red@;
+  bg: #0b0c14;
+  bg-alt: #121521;
+  bg-soft: #3b3f54;
+  fg: #c9ccd9;
+  blue: #4da3ff;
+  red: #ff6b6b;
 
   background-color: transparent;
 }
@@ -44,7 +43,7 @@ textbox-prompt-colon {
 entry {
   text-color: @fg;
   placeholder: "Search";
-  placeholder-color: @fg-muted;
+  placeholder-color: @fg;
 }
 
 listview {

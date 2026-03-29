@@ -3,7 +3,7 @@ let
   colors = import ../../colors.nix;
   template = builtins.readFile ./config.kdl.in;
   configText =
-    builtins.replaceStrings [ "@blue@" "@red@" "@black@" ] [ colors.blue colors.red colors.black ]
+    builtins.replaceStrings [ "@fg@" "@red@" "@black@" ] [ colors.fg colors.red colors.black ]
       template;
 in
 {

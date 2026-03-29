@@ -40,8 +40,8 @@ in
     # logseq
     # voicevox
     # zrythm
-    # kdePackages.kdenlive
-    # blender
+    kdePackages.kdenlive
+    blender
     jetbrains.idea
   ];
 

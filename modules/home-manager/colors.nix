@@ -1,7 +1,7 @@
 {
-  bg = "#0e111e";
+  bg = "#171A26";
   fg = "#fafafa";
-  selection = "#202746";
+  selection = "#26293d";
   black = "#1b222c";
   red = "#e06c75";
   green = "#98c379";

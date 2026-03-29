@@ -14,7 +14,7 @@ in
       reload_style_on_change = true;
       layer = "top";
       position = "top";
-      spacing = 0;
+      spacing = 8;
       modules-left = [ "niri/workspaces" ];
       modules-center = [ "niri/window" ];
       modules-right = [
@@ -22,6 +22,8 @@ in
         "battery"
         "pulseaudio"
         "clock"
+        "cpu"
+        "memory"
       ];
       "niri/workspaces" = {
         all-outputs = true;
@@ -54,25 +56,35 @@ in
         format-bluetooth = "{volume}% {icon} {format_source}";
         format-bluetooth-muted = " {icon} {format_source}";
         format-muted = " {format_source}";
-        format-source = "{volume}% ";
-        format-source-muted = "";
+        format-source = "{volume}%  ";
+        format-source-muted = " ";
         format-icons = {
-          headphone = "";
-          hands-free = "";
-          headset = "";
-          phone = "";
-          portable = "";
-          car = "";
+          headphone = " ";
+          hands-free = " ";
+          headset = " ";
+          phone = " ";
+          portable = " ";
+          car = " ";
           default = [
-            ""
-            ""
-            ""
+            " "
+            " "
+            " "
           ];
         };
       };
       clock = {
         format = "{:%H:%M}  ";
         format-alt = "{:%A, %B %d, %Y (%R)}";
+      };
+      cpu = {
+        interval = 10;
+        format = "{}%  ";
+        max-length = 10;
+      };
+      memory = {
+        interval = 30;
+        format = "{}%  ";
+        max-length = 10;
       };
     };
     inherit style;
