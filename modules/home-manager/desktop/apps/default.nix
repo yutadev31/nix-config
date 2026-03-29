@@ -6,7 +6,7 @@
 }:
 {
   imports = [
-    ./alacritty.nix
+    ./alacritty
     ./vscodium
   ]
   ++ lib.optional extraApps ./extra.nix;

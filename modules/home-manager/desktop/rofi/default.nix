@@ -1,29 +1,5 @@
 { pkgs, ... }:
 let
-  colors = import ../../colors.nix;
-  template = builtins.readFile ./theme.rasi.in;
-  theme =
-    builtins.replaceStrings
-      [
-        "@bg@"
-        "@fg@"
-        "@selection@"
-        "@blue@"
-        "@red@"
-        "@black@"
-        "@white@"
-      ]
-      [
-        colors.bg
-        colors.fg
-        colors.selection
-        colors.blue
-        colors.red
-        colors.black
-        colors.white
-      ]
-      template;
-
   rofiPowermenu = pkgs.writeShellScriptBin "rofi-powermenu" ''
     #!/usr/bin/env sh
     set -eu
@@ -53,7 +29,7 @@ let
   '';
 in
 {
-  xdg.dataFile."rofi/themes/custom.rasi".text = theme;
+  xdg.dataFile."rofi/themes/custom.rasi".source = ./theme.rasi;
 
   programs.rofi = {
     enable = true;

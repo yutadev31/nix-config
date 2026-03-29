@@ -1,6 +1,6 @@
 { inputs, pkgs, ... }:
 {
-  home.file.".config/VSCodium/User/settings.json".source = ./settings.json;
+  xdg.configFile."VSCodium/User/settings.json".source = ./settings.json;
   home.packages = with pkgs; [
     (vscode-with-extensions.override {
       vscode = vscodium;

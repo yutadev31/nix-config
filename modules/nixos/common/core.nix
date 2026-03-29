@@ -16,17 +16,6 @@
   # Console Keymap
   console.keyMap = "jp106";
 
-  # Network
-  networking.networkmanager.enable = true;
-  networking.resolvconf.enable = false;
-  networking.nameservers = [
-    "1.1.1.2"
-    "1.0.0.2"
-  ];
-  networking.firewall.allowedTCPPorts = [ 22 ];
-
-  services.resolved.enable = false;
-
   # Nix ld
   programs.nix-ld.enable = true;
 

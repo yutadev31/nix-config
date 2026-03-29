@@ -1,12 +1,3 @@
-let
-  colors = import ../../colors.nix;
-  template = builtins.readFile ./style.css.in;
-  style =
-    builtins.replaceStrings
-      [ "@bg@" "@fg@" "@selection@" "@blue@" ]
-      [ colors.bg colors.fg colors.selection colors.blue ]
-      template;
-in
 {
   programs.waybar = {
     enable = true;
@@ -87,6 +78,6 @@ in
         max-length = 10;
       };
     };
-    inherit style;
+    style = builtins.readFile ./style.css;
   };
 }

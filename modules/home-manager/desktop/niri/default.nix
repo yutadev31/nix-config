@@ -7,10 +7,8 @@ let
       template;
 in
 {
-  home = {
-    file = {
-      "${config.xdg.configHome}/niri/config.kdl".text = configText;
-      "${config.xdg.configHome}/niri/outputs.kdl".source = ./. + "/outputs-${hostName}.kdl";
-    };
+  xdg.configFile = {
+    "niri/config.kdl".text = configText;
+    "niri/outputs.kdl".source = ./. + "/outputs-${hostName}.kdl";
   };
 }

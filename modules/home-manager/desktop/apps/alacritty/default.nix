@@ -1,8 +1,10 @@
 {
+  xdg.configFile."alacritty/theme.toml".source = ./theme.toml;
+
   programs.alacritty = {
     enable = true;
     settings = {
-      general.import = [ "~/dev/yoru-theme/out/alacritty.toml" ];
+      general.import = [ "~/.config/alacritty/theme.toml" ];
       font = {
         size = 12;
         normal = {

@@ -17,6 +17,7 @@
       la = "ls -la";
 
       # Neovim
+      nano = "nvim";
       emacs = "nvim";
       vim = "nvim";
       vi = "nvim";
