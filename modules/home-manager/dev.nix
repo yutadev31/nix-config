@@ -11,16 +11,16 @@
     # docker-language-server
 
     # # JSON
-    # vscode-json-languageserver
+    vscode-json-languageserver
 
     # # TOML
-    # taplo
+    taplo
 
     # # YAML
-    # yaml-language-server
+    yaml-language-server
 
     # # Lua
-    # stylua
+    stylua
 
     # # C/C++
     # gcc
@@ -28,18 +28,18 @@
     # mesonlsp
 
     # # Java Script
-    # nodejs
-    # pnpm
+    nodejs
+    pnpm
     bun
-    # typescript-language-server
-    # tailwindcss-language-server
-    # astro-language-server
-    # vscode-css-languageserver
+    typescript-language-server
+    tailwindcss-language-server
+    astro-language-server
+    vscode-css-languageserver
 
     # # Python
     python3
     # uv
-    # pyright
+    pyright
 
     # # Rust
     (rust-bin.stable.latest.default.override {

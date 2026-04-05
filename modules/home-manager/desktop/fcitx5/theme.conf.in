@@ -9,10 +9,10 @@ ScaleWithDPI=True
 
 [InputPanel]
 Font=Hack Nerd Font 12
-NormalColor=@white@
-HighlightColor=@fg@
-HighlightBackgroundColor=@selection@
-HighlightCandidateColor=@fg@
+NormalColor=#b8c3ff
+HighlightColor=#b8c3ff
+HighlightBackgroundColor=#3b3e57
+HighlightCandidateColor=#b8c3ff
 EnableBlur=False
 FullWidthHighlight=True
 Spacing=6
@@ -20,8 +20,8 @@ PageButtonAlignment=Bottom
 
 [InputPanel/Background]
 Image=
-Color=@bg@
-BorderColor=@selection@
+Color=#222433
+BorderColor=#3b3e57
 BorderWidth=1
 Overlay=
 Gravity="Top Left"
@@ -43,8 +43,8 @@ Bottom=0
 
 [InputPanel/Highlight]
 Image=
-Color=@selection@
-BorderColor=@selection@
+Color=#3b3e57
+BorderColor=#3b3e57
 BorderWidth=0
 Overlay=
 Gravity="Top Left"
@@ -107,14 +107,14 @@ Top=0
 Bottom=0
 
 [Menu]
-NormalColor=@white@
-HighlightCandidateColor=@fg@
+NormalColor=#b8c3ff
+HighlightCandidateColor=#b8c3ff
 Spacing=4
 
 [Menu/Background]
 Image=
-Color=@bg@
-BorderColor=@selection@
+Color=#222433
+BorderColor=#3b3e57
 BorderWidth=1
 Overlay=
 Gravity="Top Left"
@@ -136,8 +136,8 @@ Bottom=0
 
 [Menu/Highlight]
 Image=
-Color=@selection@
-BorderColor=@selection@
+Color=#3b3e57
+BorderColor=#3b3e57
 BorderWidth=0
 Overlay=
 Gravity="Top Left"

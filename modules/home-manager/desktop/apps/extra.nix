@@ -36,7 +36,7 @@ in
     zed-editor
     gimp
     inkscape
-    # qgis
+    qgis
     # logseq
     # voicevox
     # zrythm

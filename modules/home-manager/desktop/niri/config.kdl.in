@@ -73,9 +73,9 @@ layout {
         // off
 
         width 2
-        active-color "@fg@"
-        inactive-color "@black@"
-        urgent-color "@red@"
+        active-color "#b8c3ff"
+        inactive-color "#4f546e"
+        urgent-color "#f2a2a2"
     }
 
     shadow {
@@ -98,10 +98,7 @@ layout {
 }
 
 spawn-at-startup "waybar"
-spawn-at-startup "mako"
 spawn-at-startup "fcitx5"
-spawn-at-startup "nm-applet"
-spawn-at-startup "swaybg" "-i" "/home/yuta/wallpaper.jpg"
 
 hotkey-overlay {
     skip-at-startup
@@ -123,7 +120,7 @@ window-rule {
 }
 
 window-rule {
-    geometry-corner-radius 0
+    geometry-corner-radius 8
     clip-to-geometry true
 }
 

@@ -9,6 +9,9 @@
     ./theme.nix
     ./waybar
     ./apps
+    ./hyprland.nix
+    ./hyprlock.nix
+    ./hyprpaper.nix
   ];
 
   home.packages = with pkgs; [
@@ -24,7 +27,6 @@
     xwayland-satellite
     xdg-desktop-portal-gtk
     xdg-desktop-portal-gnome
-    swaybg
     easyeffects
   ];
 }

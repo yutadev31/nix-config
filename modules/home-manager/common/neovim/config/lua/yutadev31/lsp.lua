@@ -1,6 +1,7 @@
 vim.lsp.enable({
   "astro",
   "bashls",
+  "biome",
   "clangd",
   "cssls",
   "docker_language_server",

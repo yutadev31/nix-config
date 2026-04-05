@@ -15,8 +15,6 @@ return {
     setup("misc", {})
     setup("sessions", {})
 
-    setup("starter", {})
-
     MiniMisc.setup_restore_cursor()
   end,
 }

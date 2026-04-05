@@ -1,10 +1,8 @@
 * {
-  bg: #0b0c14;
-  bg-alt: #121521;
-  bg-soft: #3b3f54;
-  fg: #c9ccd9;
-  blue: #4da3ff;
-  red: #ff6b6b;
+  bg: #222433;
+  bg-alt: #3b3e57;
+  fg: #b8c3ff;
+  red: #f2a2a2;
 
   background-color: transparent;
 }
@@ -15,7 +13,7 @@ window {
   width: 520px;
   background-color: @bg;
   border: 1px;
-  border-color: @bg-soft;
+  border-color: @bg-alt;
   border-radius: 10px;
   padding: 10px;
 }
@@ -33,11 +31,11 @@ inputbar {
 }
 
 prompt {
-  text-color: @blue;
+  text-color: @fg;
 }
 
 textbox-prompt-colon {
-  text-color: @blue;
+  text-color: @fg;
 }
 
 entry {
@@ -67,7 +65,7 @@ element alternate {
 }
 
 element selected {
-  background-color: @bg-soft;
+  background-color: @bg-alt;
   text-color: @fg;
 }
 

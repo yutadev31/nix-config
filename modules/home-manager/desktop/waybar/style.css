@@ -7,21 +7,32 @@
 }
 
 #waybar {
-  background: #0b0c14;
+  background: transparent;
   color: #c9ccd9;
-}
-
-label.module,
-box.module {
-  padding: 4px 4px;
 }
 
 #workspaces button {
-  padding: 0 4px;
+  padding: 2px 8px;
   margin: 0 2px;
-  color: #c9ccd9;
+  background: #222433;
+  color: #b8c3ff;
+  border-radius: 8px;
 }
 
 #workspaces button.active {
-  color: #4d6aff;
+  background: #b8c3ff;
+  color: #222433;
+}
+
+#window,
+#tray,
+#cpu,
+#memory,
+#battery,
+#pulseaudio,
+#clock {
+  padding: 2px 12px;
+  background: #222433;
+  color: #b8c3ff;
+  border-radius: 8px;
 }

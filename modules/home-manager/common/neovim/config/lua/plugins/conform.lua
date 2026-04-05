@@ -1,4 +1,4 @@
-local js_formatters = { { "biome", "prettierd", "prettier" } }
+local js_formatters = { "biome" }
 
 return {
   "stevearc/conform.nvim",
