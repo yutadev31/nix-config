@@ -40,6 +40,7 @@
     python3
     # uv
     pyright
+    black
 
     # # Rust
     (rust-bin.stable.latest.default.override {
