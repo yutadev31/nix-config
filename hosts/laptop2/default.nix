@@ -2,7 +2,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules/nixos
-    ../../modules/nixos/dev/android.nix
+    # ../../modules/nixos/dev/android.nix
     ../../modules/nixos/desktop/core.nix
     ../../modules/nixos/desktop/bluetooth.nix
     ../../modules/nixos/desktop/firefox.nix

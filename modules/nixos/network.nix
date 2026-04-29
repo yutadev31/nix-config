@@ -26,6 +26,5 @@
   # Firewall
   networking.firewall.allowedTCPPorts = [
     22
-    8000
   ];
 }

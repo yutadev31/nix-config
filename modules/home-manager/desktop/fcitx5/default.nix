@@ -1,13 +1,4 @@
 { pkgs, ... }:
-let
-  colors = import ../../colors.nix;
-  template = builtins.readFile ./theme.conf.in;
-  theme =
-    builtins.replaceStrings
-      [ "@bg@" "@fg@" "@selection@" "@white@" ]
-      [ colors.bg colors.fg colors.selection colors.white ]
-      template;
-in
 {
   i18n.inputMethod = {
     enable = true;
@@ -67,5 +58,5 @@ in
     };
   };
 
-  home.file.".local/share/fcitx5/themes/ink-and-frost/theme.conf".text = theme;
+  home.file.".local/share/fcitx5/themes/ink-and-frost/theme.conf".source = ./theme.conf;
 }

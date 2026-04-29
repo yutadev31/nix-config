@@ -1,14 +1,7 @@
-{ config, hostName, ... }:
-let
-  colors = import ../../colors.nix;
-  template = builtins.readFile ./config.kdl.in;
-  configText =
-    builtins.replaceStrings [ "@fg@" "@red@" "@black@" ] [ colors.fg colors.red colors.black ]
-      template;
-in
+{ hostName, ... }:
 {
   xdg.configFile = {
-    "niri/config.kdl".text = configText;
+    "niri/config.kdl".source = ./config.kdl;
     "niri/outputs.kdl".source = ./. + "/outputs-${hostName}.kdl";
   };
 }

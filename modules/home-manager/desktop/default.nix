@@ -9,9 +9,6 @@
     ./theme.nix
     ./waybar
     ./apps
-    ./hyprland.nix
-    ./hyprlock.nix
-    ./hyprpaper.nix
   ];
 
   home.packages = with pkgs; [
