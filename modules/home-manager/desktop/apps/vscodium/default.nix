@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 {
   xdg.configFile."VSCodium/User/settings.json".source = ./settings.json;
   home.packages = with pkgs; [
@@ -41,8 +41,6 @@
         ms-vscode.cmake-tools
 
         Google.gemini-cli-vscode-ide-companion
-
-        inputs.ink-and-frost-vscode.packages."x86_64-linux".vscode-theme
       ];
     })
   ];

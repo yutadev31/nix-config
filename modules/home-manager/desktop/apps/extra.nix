@@ -30,7 +30,7 @@ let
 in
 {
   home.packages = with pkgs; [
-    discord-ptb
+    # discord-ptb
     # discord-canary
     vlc
     zed-editor
@@ -43,10 +43,12 @@ in
     kdePackages.kdenlive
     blender
     jetbrains.idea
+    anki-bin
   ];
 
   programs.firefox = {
     enable = true;
+    configPath = ".mozilla/firefox";
     profiles = {
       default = {
         isDefault = true;

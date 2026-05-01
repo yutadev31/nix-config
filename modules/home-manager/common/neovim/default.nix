@@ -1,10 +1,30 @@
-{ pkgs, ... }:
 {
-  home.packages = [ pkgs.neovim ];
+  imports = [
+    ./options.nix
+    ./plugins
+  ];
 
-  xdg.configFile = {
-    "nvim/lsp".source = ./config/lsp;
-    "nvim/lua".source = ./config/lua;
-    "nvim/init.lua".source = ./config/init.lua;
+  programs.nixvim = {
+    enable = true;
+    plugins.mini-pairs.enable = true;
+    plugins.mini-cursorword.enable = true;
+    plugins.mini-indentscope.enable = true;
+    plugins.mini-trailspace.enable = true;
+    plugins.cmp = {
+      settings = {
+        mapping = {
+          "<C-Space>" = "cmp.mapping.complete()";
+          "<CR>" = "cmp.mapping.confirm({ select = true })";
+          "<C-n>" = "cmp.mapping.select_next_item()";
+          "<C-p>" = "cmp.mapping.select_prev_item()";
+        };
+        sources = [
+          { name = "nvim_lsp"; }
+          { name = "path"; }
+          { name = "buffer"; }
+        ];
+      };
+    };
+    colorschemes.tokyonight.enable = true;
   };
 }

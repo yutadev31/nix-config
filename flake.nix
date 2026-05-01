@@ -10,13 +10,17 @@
       url = "github:oxalica/rust-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    ink-and-frost-vscode.url = "github:yutadev31/ink-and-frost-vscode";
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs =
     inputs@{
       nixpkgs,
       home-manager,
       rust-overlay,
+      nixvim,
       ...
     }:
     let
@@ -45,7 +49,10 @@
               games
               ;
           };
-          modules = [ ./modules/home-manager ];
+          modules = [
+            ./modules/home-manager
+            nixvim.homeModules.nixvim
+          ];
         };
     in
     {
