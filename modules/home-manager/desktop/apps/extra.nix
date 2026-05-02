@@ -30,16 +30,11 @@ let
 in
 {
   home.packages = with pkgs; [
-    # discord-ptb
-    # discord-canary
     vlc
-    zed-editor
     gimp
     inkscape
     qgis
-    # logseq
     # voicevox
-    # zrythm
     kdePackages.kdenlive
     blender
     jetbrains.idea
