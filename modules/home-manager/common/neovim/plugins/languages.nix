@@ -51,6 +51,27 @@
             };
           };
         };
+        html = {
+          enable = true;
+        };
+        cssls = {
+          enable = true;
+        };
+        ts_ls = {
+          enable = true;
+        };
+        tailwindcss = {
+          enable = true;
+        };
+        taplo = {
+          enable = true;
+        };
+        jsonls = {
+          enable = true;
+        };
+        yamlls = {
+          enable = true;
+        };
       };
     };
   };
