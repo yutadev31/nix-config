@@ -23,8 +23,8 @@
     stylua
 
     # # C/C++
-    # gcc
-    # clang-tools
+    gcc
+    clang-tools
     # mesonlsp
 
     # # Java Script
@@ -48,7 +48,8 @@
     })
 
     # # Go
-    # go
+    go
+    gopls
 
     # # Dart (Flutter)
     # flutter

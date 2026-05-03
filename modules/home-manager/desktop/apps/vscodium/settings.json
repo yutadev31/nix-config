@@ -84,5 +84,8 @@
   "[dart]": {
     "editor.selectionHighlight": false,
     "editor.wordBasedSuggestions": "off"
+  },
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
   }
 }

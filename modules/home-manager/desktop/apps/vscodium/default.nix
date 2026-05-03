@@ -16,6 +16,7 @@
         github.vscode-github-actions
         ms-azuretools.vscode-docker
 
+        golang.go
         svelte.svelte-vscode
         dbaeumer.vscode-eslint
         esbenp.prettier-vscode

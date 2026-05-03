@@ -15,6 +15,7 @@
       settings = {
         formatters_by_ft = {
           nix = [ "nixfmt" ];
+          go = [ "gofmt" ];
         };
         format_on_save = {
           timeout_ms = 2000;
@@ -70,6 +71,9 @@
           enable = true;
         };
         yamlls = {
+          enable = true;
+        };
+        gopls = {
           enable = true;
         };
       };
