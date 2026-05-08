@@ -1,33 +1,4 @@
 { pkgs, ... }:
-let
-  firefoxSettings = {
-    # Mouse
-    "general.autoScroll" = true;
-    "middlemouse.paste" = false;
-
-    # Cache
-    "browser.cache.disk.enable" = false;
-
-    # Bookmark
-    "browser.toolbars.bookmarks.visibility" = "always";
-
-    # Privacy
-    "privacy.firstparty.isolate" = true;
-    "privacy.trackingprotection.enabled" = true;
-    "media.peerconnection.enabled" = false;
-
-    # Telemetry
-    "toolkit.telemetry.enabled" = false;
-    "toolkit.telemetry.unified" = false;
-    "datareporting.healthreport.uploadEnabled" = false;
-
-    # Other
-    "browser.aboutConfig.showWarning" = false;
-
-    # Performance
-    "gfx.webrender.all" = true;
-  };
-in
 {
   home.packages = with pkgs; [
     vlc
@@ -47,11 +18,33 @@ in
     profiles = {
       default = {
         isDefault = true;
-        settings = firefoxSettings;
-      };
-      english = {
-        id = 1;
-        settings = firefoxSettings;
+        settings = {
+          # Mouse
+          "general.autoScroll" = true;
+          "middlemouse.paste" = false;
+
+          # Cache
+          "browser.cache.disk.enable" = false;
+
+          # Bookmark
+          "browser.toolbars.bookmarks.visibility" = "always";
+
+          # Privacy
+          "privacy.firstparty.isolate" = true;
+          "privacy.trackingprotection.enabled" = true;
+          "media.peerconnection.enabled" = false;
+
+          # Telemetry
+          "toolkit.telemetry.enabled" = false;
+          "toolkit.telemetry.unified" = false;
+          "datareporting.healthreport.uploadEnabled" = false;
+
+          # Other
+          "browser.aboutConfig.showWarning" = false;
+
+          # Performance
+          "gfx.webrender.all" = true;
+        };
       };
     };
   };
