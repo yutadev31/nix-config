@@ -1,8 +1,8 @@
 {
   imports = [
-    ../../home/common
-    ../../home/desktop
-    ../../home/dev.nix
-    ../../home/games.nix
+    ../../modules/home/common
+    ../../modules/home/desktop
+    ../../modules/home/dev.nix
+    ../../modules/home/games.nix
   ];
 }
