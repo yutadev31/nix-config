@@ -8,8 +8,8 @@
   imports = [
     ./alacritty
     ./vscodium
-  ]
-  ++ lib.optional extraApps ./extra.nix;
+    ./extra.nix
+  ];
 
   home.packages = with pkgs; [
     brave

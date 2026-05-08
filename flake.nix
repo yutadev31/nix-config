@@ -43,14 +43,10 @@
             inherit inputs;
             inherit
               hostName
-              desktop
-              extraApps
-              dev
-              games
               ;
           };
           modules = [
-            ./modules/home-manager
+            (./. + "/hosts/${hostName}/home.nix")
             nixvim.homeModules.nixvim
           ];
         };

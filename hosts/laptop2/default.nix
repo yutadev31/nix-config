@@ -1,16 +1,15 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../../modules/nixos
-    # ../../modules/nixos/dev/android.nix
-    ../../modules/nixos/desktop/core.nix
-    ../../modules/nixos/desktop/bluetooth.nix
-    ../../modules/nixos/desktop/firefox.nix
-    ../../modules/nixos/desktop/fonts.nix
-    ../../modules/nixos/desktop/greetd.nix
-    ../../modules/nixos/desktop/niri.nix
-    ../../modules/nixos/dev/docker.nix
-    ../../modules/nixos/dev/ollama.nix
+    ../../modules
+    ../../modules/desktop/core.nix
+    ../../modules/desktop/bluetooth.nix
+    ../../modules/desktop/firefox.nix
+    ../../modules/desktop/fonts.nix
+    ../../modules/desktop/greetd.nix
+    ../../modules/desktop/niri.nix
+    ../../modules/dev/docker.nix
+    ../../modules/dev/ollama.nix
   ];
 
   # Network
