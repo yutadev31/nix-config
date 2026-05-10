@@ -25,5 +25,7 @@
     xdg-desktop-portal-gtk
     xdg-desktop-portal-gnome
     easyeffects
+    awww
+    cliphist
   ];
 }
