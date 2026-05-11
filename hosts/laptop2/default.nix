@@ -20,4 +20,8 @@
       prefixLength = 24;
     }
   ];
+
+  boot.kernelParams = [
+    "amd_pstate=active"
+  ];
 }
