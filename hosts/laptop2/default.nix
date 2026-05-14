@@ -24,4 +24,12 @@
   boot.kernelParams = [
     "amd_pstate=active"
   ];
+  boot.tmpOnTmpfs = true;
+
+  swapDevices = [
+    {
+      device = "/var/lib/swapfile";
+      size = 16 * 1024; # 16 GiB
+    }
+  ];
 }

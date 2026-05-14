@@ -3,6 +3,8 @@
   programs.mise.enable = true;
 
   home.packages = with pkgs; [
+    tmux
+
     # Nix
     nil
     nixfmt
