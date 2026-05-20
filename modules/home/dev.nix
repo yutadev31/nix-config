@@ -62,5 +62,9 @@
     # haskellPackages.haskell-language-server
     # haskellPackages.hlint
     # haskellPackages.ormolu
+
+    # Zig
+    zig
+    zls
   ];
 }

@@ -6,7 +6,6 @@
     # gping
     # onefetch
     # zellij
-    # helix
     # nodePackages.cspell
     # delta
   ];
@@ -60,5 +59,30 @@
   programs.lazygit = {
     enable = true;
     settings = { };
+  };
+
+  # Helix
+  programs.helix = {
+    enable = true;
+
+    settings = {
+      theme = "onedark";
+      editor = {
+        cursor-shape = {
+          normal = "block";
+          insert = "bar";
+          select = "underline";
+        };
+        file-picker = {
+          hidden = false;
+        };
+      };
+    };
+    languages.language = [
+      {
+        name = "nix";
+        auto-format = true;
+      }
+    ];
   };
 }

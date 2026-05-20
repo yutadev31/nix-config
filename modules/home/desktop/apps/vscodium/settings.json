@@ -34,6 +34,7 @@
     "https://developer.microsoft.com/json-schemas/": true,
     "https://biomejs.dev": true
   },
+  "zig.zls.enabled": "on",
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -87,5 +88,8 @@
   },
   "[go]": {
     "editor.defaultFormatter": "golang.go"
+  },
+  "[zig]": {
+    "editor.defaultFormatter": "ziglang.vscode-zig"
   }
 }

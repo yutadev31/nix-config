@@ -10,6 +10,7 @@
     blender
     jetbrains.idea
     anki-bin
+    zed-editor
   ];
 
   programs.firefox = {

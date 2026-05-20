@@ -40,6 +40,7 @@
         justusadam.language-haskell
         dbaeumer.vscode-eslint
         ms-vscode.cmake-tools
+        ziglang.vscode-zig
 
         Google.gemini-cli-vscode-ide-companion
       ];
