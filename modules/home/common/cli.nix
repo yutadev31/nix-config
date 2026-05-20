@@ -83,6 +83,21 @@
         name = "nix";
         auto-format = true;
       }
+      {
+        name = "rust";
+        auto-format = true;
+      }
+      {
+        name = "toml";
+        auto-format = true;
+      }
     ];
+  };
+
+  # Tmux
+  programs.tmux = {
+    enable = true;
+    clock24 = true;
+    terminal = "xterm-256color";
   };
 }
