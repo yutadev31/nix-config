@@ -2,25 +2,16 @@
   programs.nixvim = {
     plugins.lualine.enable = true;
     plugins.bufferline.enable = true;
-    plugins.neo-tree = {
+    plugins.oil = {
       enable = true;
-      settings = {
-        filesystem = {
-          filtered_items = {
-            visible = true;
-            hide_dotfiles = false;
-            hide_gitignored = false;
-            hide_ignored = false;
-            hide_hidden = false;
-          };
-        };
-      };
     };
     plugins.telescope.enable = true;
     plugins.toggleterm = {
       enable = true;
       settings = {
         direction = "float";
+        start_in_insert = true;
+        persist_size = true;
       };
     };
     plugins.noice = {
@@ -54,8 +45,8 @@
     keymaps = [
       {
         mode = "n";
-        key = "<leader>e";
-        action = "<cmd>Neotree<cr>";
+        key = "<leader>ee";
+        action = "<cmd>Oil<cr>";
       }
       {
         mode = "n";
