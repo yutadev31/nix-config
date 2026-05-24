@@ -1,10 +1,8 @@
 {
-  xdg.configFile."alacritty/theme.toml".source = ./theme.toml;
-
   programs.alacritty = {
     enable = true;
+    theme = "tokyo_night_storm";
     settings = {
-      general.import = [ "~/.config/alacritty/theme.toml" ];
       font = {
         size = 12;
         normal = {

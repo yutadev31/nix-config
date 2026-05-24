@@ -25,6 +25,19 @@
         ];
       };
     };
-    colorschemes.tokyonight.enable = true;
+    colorschemes.tokyonight = {
+      enable = true;
+      settings = {
+        style = "storm";
+        transparent = true;
+      };
+    };
+
+    extraConfigLua = ''
+      vim.lsp.inlay_hint.enable(true)
+      vim.diagnostic.config({
+        virtual_text = true,
+      })
+    '';
   };
 }
