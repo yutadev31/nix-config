@@ -16,6 +16,8 @@
         formatters_by_ft = {
           nix = [ "nixfmt" ];
           go = [ "gofmt" ];
+          asm = [ "asmfmt" ];
+          make = [ "bake" ];
         };
         format_on_save = {
           timeout_ms = 2000;
@@ -76,6 +78,9 @@
           enable = true;
         };
         gopls = {
+          enable = true;
+        };
+        clangd = {
           enable = true;
         };
       };

@@ -100,4 +100,10 @@
     clock24 = true;
     terminal = "xterm-256color";
   };
+
+  # Fzf
+  programs.fzf = {
+    enable = true;
+    enableFishIntegration = true;
+  };
 }
