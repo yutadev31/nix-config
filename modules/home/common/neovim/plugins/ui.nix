@@ -143,6 +143,18 @@
         action = "<cmd>Telescope buffers<CR>";
         options.desc = "Find buffers";
       }
+      {
+        mode = "n";
+        key = "<leader>glg";
+        action = "<cmd>Telescope git_commits<CR>";
+        options.desc = "Find Git commits";
+      }
+      {
+        mode = "n";
+        key = "<leader>glb";
+        action = "<cmd>Telescope git_bcommits<CR>";
+        options.desc = "Find Git commits";
+      }
 
       # Neogit
       {
