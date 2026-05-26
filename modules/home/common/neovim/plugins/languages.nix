@@ -83,6 +83,9 @@
         clangd = {
           enable = true;
         };
+        zls = {
+          enable = true;
+        };
       };
     };
   };

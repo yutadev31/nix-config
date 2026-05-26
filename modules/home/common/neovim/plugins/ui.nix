@@ -145,6 +145,12 @@
       }
       {
         mode = "n";
+        key = "<leader>fs";
+        action = "<cmd>Telescope treesitter<CR>";
+        options.desc = "Find symbols";
+      }
+      {
+        mode = "n";
         key = "<leader>glg";
         action = "<cmd>Telescope git_commits<CR>";
         options.desc = "Find Git commits";

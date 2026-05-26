@@ -2,7 +2,7 @@ input {
     keyboard {
         xkb {
             layout "jp"
-            options "compose:caps"
+            options "ctrl:nocaps,compose:ralt"
         }
 
         numlock

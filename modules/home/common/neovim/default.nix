@@ -10,6 +10,7 @@
     plugins.mini-cursorword.enable = true;
     plugins.mini-indentscope.enable = true;
     plugins.mini-trailspace.enable = true;
+    plugins.mini-surround.enable = true;
     plugins.cmp = {
       settings = {
         mapping = {
