@@ -11,19 +11,33 @@
     plugins.mini-indentscope.enable = true;
     plugins.mini-trailspace.enable = true;
     plugins.mini-surround.enable = true;
-    plugins.cmp = {
+    plugins.blink-cmp = {
+      enable = true;
       settings = {
-        mapping = {
-          "<C-Space>" = "cmp.mapping.complete()";
-          "<CR>" = "cmp.mapping.confirm({ select = true })";
-          "<C-n>" = "cmp.mapping.select_next_item()";
-          "<C-p>" = "cmp.mapping.select_prev_item()";
+        keymap = {
+          "<C-n>" = [
+            "select_next"
+            "fallback"
+          ];
+          "<C-p>" = [
+            "select_prev"
+            "fallback"
+          ];
+          "<CR>" = [
+            "accept"
+            "fallback"
+          ];
         };
-        sources = [
-          { name = "nvim_lsp"; }
-          { name = "path"; }
-          { name = "buffer"; }
-        ];
+        completion = {
+          documentation.auto_show = true;
+        };
+        sources = {
+          default = [
+            "lsp"
+            "path"
+            "buffer"
+          ];
+        };
       };
     };
     colorschemes.tokyonight = {
