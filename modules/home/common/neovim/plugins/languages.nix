@@ -14,6 +14,10 @@
       enable = true;
       settings = {
         formatters_by_ft = {
+          javascript = [ "biome-check" ];
+          javascriptreact = [ "biome-check" ];
+          typescript = [ "biome-check" ];
+          typescriptreact = [ "biome-check" ];
           nix = [ "nixfmt" ];
           go = [ "gofmt" ];
           asm = [ "asmfmt" ];
