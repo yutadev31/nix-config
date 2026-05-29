@@ -28,7 +28,11 @@
       gcl = "git clone";
       ga = "git add";
       gaa = "git add .";
+      grs = "git restore --staged";
+      grsa = "git restore --staged";
       gc = "git commit";
+      gca = "git commit --amend";
+      gci = ''git commit -m "Initial commit"'';
       gcinit = ''git commit -m "Initial commit"'';
       gp = "git push";
       gph = "git push -u origin HEAD";
@@ -36,6 +40,7 @@
       gr = "git remote";
       gs = "git status -sb";
       gd = "git diff";
+      gdc = "git diff --cached";
       gco = "git checkout";
       gcb = "git checkout -b";
       gb = "git branch";
