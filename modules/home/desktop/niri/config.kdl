@@ -99,6 +99,7 @@ layout {
 
 spawn-at-startup "waybar"
 spawn-at-startup "fcitx5"
+spawn-at-startup "awww-daemon"
 
 hotkey-overlay {
     skip-at-startup

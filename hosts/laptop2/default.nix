@@ -1,4 +1,4 @@
-{
+{ pkgs, ... }: {
   imports = [
     ./hardware-configuration.nix
     ../../modules/nixos
@@ -25,6 +25,12 @@
     "amd_pstate=active"
   ];
   boot.tmpOnTmpfs = true;
+
+  environment.systemPackages = with pkgs; [
+    piper
+    libratbag
+  ];
+  services.ratbagd.enable = true;
 
   swapDevices = [
     {

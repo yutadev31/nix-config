@@ -25,11 +25,17 @@
     wheelNeedsPassword = false;
   };
 
+  # RTKit
+  security.rtkit.enable = true;
+
   # GnuPG
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
   };
+
+  # Power
+  powerManagement.cpuFreqGovernor = "performance";
 
   # User
   users.users.yuta = {
