@@ -2,10 +2,10 @@
 {
   home.packages = with pkgs; [
     codex
+    cspell
     # gping
     # onefetch
     # zellij
-    # nodePackages.cspell
     # delta
   ];
 
