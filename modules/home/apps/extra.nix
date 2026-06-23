@@ -13,6 +13,8 @@
     zed-editor
   ];
 
+  programs.google-chrome.enable = true;
+
   programs.firefox = {
     enable = true;
     configPath = ".mozilla/firefox";

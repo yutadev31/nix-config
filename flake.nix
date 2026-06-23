@@ -1,7 +1,6 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    flake-utils.url = "github:numtide/flake-utils";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -25,25 +24,25 @@
     }:
     let
       system = "x86_64-linux";
+      lib = nixpkgs.lib;
       pkgs = import nixpkgs {
         inherit system;
         overlays = [ rust-overlay.overlays.default ];
       };
+      hostNames = [
+        "laptop2"
+        "laptop3"
+      ];
+      mkConfigurations =
+        builder:
+        lib.genAttrs hostNames (hostName: builder hostName);
       buildHomeConfiguration =
         hostName:
-        {
-          desktop,
-          extraApps,
-          dev,
-          games,
-        }:
         home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           extraSpecialArgs = {
             inherit inputs;
-            inherit
-              hostName
-              ;
+            inherit hostName;
           };
           modules = [
             (./. + "/hosts/${hostName}/home.nix")
@@ -52,24 +51,10 @@
         };
     in
     {
-      nixosConfigurations = {
-        laptop2 = nixpkgs.lib.nixosSystem { modules = [ ./hosts/laptop2 ]; };
-        laptop3 = nixpkgs.lib.nixosSystem { modules = [ ./hosts/laptop3 ]; };
-      };
+      nixosConfigurations = mkConfigurations (
+        hostName: nixpkgs.lib.nixosSystem { modules = [ (./. + "/hosts/${hostName}") ]; }
+      );
 
-      homeConfigurations = {
-        laptop2 = buildHomeConfiguration "laptop2" {
-          desktop = true;
-          extraApps = true;
-          dev = true;
-          games = true;
-        };
-        laptop3 = buildHomeConfiguration "laptop3" {
-          desktop = true;
-          extraApps = false;
-          dev = false;
-          games = false;
-        };
-      };
+      homeConfigurations = mkConfigurations buildHomeConfiguration;
     };
 }

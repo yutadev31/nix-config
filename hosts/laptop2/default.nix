@@ -1,41 +1,10 @@
 { pkgs, ... }: {
   imports = [
     ./hardware-configuration.nix
-    ../../modules/nixos
-    ../../modules/nixos/desktop/core.nix
-    ../../modules/nixos/desktop/bluetooth.nix
-    ../../modules/nixos/desktop/firefox.nix
-    ../../modules/nixos/desktop/fonts.nix
-    ../../modules/nixos/desktop/greetd.nix
-    ../../modules/nixos/desktop/niri.nix
-    ../../modules/nixos/dev/docker.nix
-    ../../modules/nixos/dev/ollama.nix
-  ];
-
-  # Network
-  networking.hostName = "laptop2";
-  networking.interfaces.enp1s0.ipv4.addresses = [
-    {
-      address = "192.168.11.100";
-      prefixLength = 24;
-    }
-  ];
-
-  boot.kernelParams = [
-    "amd_pstate=active"
-  ];
-  boot.tmpOnTmpfs = true;
-
-  environment.systemPackages = with pkgs; [
-    piper
-    libratbag
-  ];
-  services.ratbagd.enable = true;
-
-  swapDevices = [
-    {
-      device = "/var/lib/swapfile";
-      size = 16 * 1024; # 16 GiB
-    }
+    ./networking.nix
+    ./system.nix
+    ../../profiles/nixos/desktop.nix
+    ../../profiles/nixos/bluetooth.nix
+    ../../profiles/nixos/dev-workstation.nix
   ];
 }

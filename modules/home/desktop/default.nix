@@ -8,7 +8,6 @@
     ./swaync
     ./theme.nix
     ./waybar
-    ./apps
   ];
 
   home.packages = with pkgs; [

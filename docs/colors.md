@@ -1,6 +1,6 @@
 # Colors
 
-Source of truth: `modules/home-manager/colors.nix`.
+Source of truth: `modules/home/desktop/theme.nix`.
 
 ## Core
 

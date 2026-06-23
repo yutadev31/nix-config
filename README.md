@@ -38,7 +38,7 @@ home-manager switch --flake .#laptop2
 
 - `laptop2`
   - NixOS: GUI + Android + Bluetooth + Docker
-  - Home Manager: desktop + dev + games + extraApps
+  - Home Manager: desktop + dev + games + extra apps
 - `laptop3`
   - NixOS: GUI
   - Home Manager: desktop
@@ -46,19 +46,27 @@ home-manager switch --flake .#laptop2
 ## Layout
 
 - `flake.nix`
-  - `nixosConfigurations`: `laptop2`, `laptop3`
-  - `homeConfigurations`: `laptop2`, `laptop3`
+  - Generates `nixosConfigurations` and `homeConfigurations` from a shared host list
 - `hosts/`
-  - Per-host NixOS config (e.g., static IP)
+  - Host-specific values and composition
+  - `default.nix`: host entrypoint
+  - `networking.nix`, `system.nix`, `home.nix`: host-local overrides
+- `profiles/`
+  - Reusable config sets assembled from modules
+  - `nixos/desktop.nix`, `nixos/dev-workstation.nix`, `nixos/bluetooth.nix`
+  - `home/desktop.nix`, `home/dev.nix`, `home/games.nix`, `home/extra-apps.nix`
 - `modules/nixos/`
-  - Common NixOS config (boot, user, ssh, nix, etc.)
-  - `gui.nix`: niri + greetd + pipewire + fonts, etc.
-  - `android.nix`, `bluetooth.nix`, `docker.nix`
-- `modules/home-manager/`
-  - `common/`: CLI, fish, neovim
-  - `desktop/`: niri, waybar, swaync, rofi, fcitx5, theme, apps
-  - `dev.nix`: dev toolchain
-  - `games.nix`: game-related packages
+  - Reusable system modules
+  - `base/`: boot, user, ssh, nix, tools, network defaults
+  - `desktop/`: niri + greetd + pipewire + fonts + browser-related system config
+  - `dev/`: Android, Docker, Ollama
+- `modules/home/`
+  - Reusable user modules
+  - `base/`: CLI, fish, shared user defaults
+  - `desktop/`: niri, waybar, swaync, rofi, fcitx5, theme
+  - `apps/`: shared GUI app set and optional extras
+  - `programs/`: per-program config such as neovim, alacritty, vscodium
+  - `dev/`, `games/`: focused package groups
 - `scripts/`
   - `os-build`: `nixos-rebuild build --flake .#<host>`
   - `os-test`: `nixos-rebuild test --flake .#<host>`
@@ -73,6 +81,6 @@ home-manager switch --flake .#laptop2
 
 ## Notes
 
-- `modules/home-manager/desktop/niri/` switches `outputs-<host>.kdl` per host.
-- Extra GUI apps are gated by the `extraApps` flag (enabled on `laptop2`).
+- `modules/home/desktop/niri/` switches `outputs-<host>.kdl` per host via `hostName`.
+- Extra GUI apps are isolated in `profiles/home/extra-apps.nix` and enabled on `laptop2`.
 - Alacritty colors theme name: Ink & Frost  (see `docs/colors.md`).

@@ -10,8 +10,9 @@ This file contains instructions for automated agents working in this repository.
 
 ## Modules layout
 
-- `modules/home-manager/` contains Home Manager modules for user-level configuration.
+- `modules/home/` contains Home Manager modules for user-level configuration.
 - `modules/nixos/` contains NixOS modules for system-level configuration.
+- `profiles/` contains reusable configuration sets composed from modules.
 
 ## Scripts
 
