@@ -63,6 +63,8 @@
       foldexpr = "nvim_treesitter#foldexpr()";
       foldlevel = 99;
       foldenable = true;
+
+      shell = "fish";
     };
   };
 }
