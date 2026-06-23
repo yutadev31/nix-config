@@ -40,13 +40,13 @@
         };
       };
     };
-    plugins.notify = {
+    plugins.mini-notify = {
       enable = true;
       settings = {
-        background_colour = "#000000";
-        render = "compact";
-        stages = "fade";
-        max_width = 60;
+        # background_colour = "#000000";
+        # render = "compact";
+        # stages = "fade";
+        # max_width = 30;
       };
     };
     plugins.mini-icons = {
@@ -196,5 +196,9 @@
         options.desc = "Todo";
       }
     ];
+
+    extraConfigLua = ''
+      vim.notify = require("mini.notify").make_notify()
+    '';
   };
 }

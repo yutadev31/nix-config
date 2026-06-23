@@ -54,6 +54,8 @@
         virtual_text = true,
         severity_sort = true,
       })
+
+      vim.lsp.enable("biome")
     '';
   };
 }

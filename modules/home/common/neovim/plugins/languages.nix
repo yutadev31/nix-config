@@ -10,10 +10,16 @@
         };
       };
     };
+    plugins.ts-autotag = {
+      enable = true;
+    };
     plugins.conform-nvim = {
       enable = true;
       settings = {
         formatters_by_ft = {
+          html = [ "biome-check" ];
+          css = [ "biome-check" ];
+          json = [ "biome-check" ];
           javascript = [ "biome-check" ];
           javascriptreact = [ "biome-check" ];
           typescript = [ "biome-check" ];
