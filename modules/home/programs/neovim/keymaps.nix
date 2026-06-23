@@ -1,15 +1,13 @@
 let
-  normal =
-    key: action: desc: {
-      mode = "n";
-      inherit key action;
-      options.desc = desc;
-    };
-  terminal =
-    key: action: {
-      mode = "t";
-      inherit key action;
-    };
+  normal = key: action: desc: {
+    mode = "n";
+    inherit key action;
+    options.desc = desc;
+  };
+  terminal = key: action: {
+    mode = "t";
+    inherit key action;
+  };
 in
 {
   programs.nixvim.keymaps = [

@@ -13,13 +13,16 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    treefmt-nix.url = "github:numtide/treefmt-nix";
   };
   outputs =
     inputs@{
+      self,
       nixpkgs,
       home-manager,
       rust-overlay,
       nixvim,
+      treefmt-nix,
       ...
     }:
     let
@@ -33,9 +36,7 @@
         "laptop2"
         "laptop3"
       ];
-      mkConfigurations =
-        builder:
-        lib.genAttrs hostNames (hostName: builder hostName);
+      mkConfigurations = builder: lib.genAttrs hostNames (hostName: builder hostName);
       buildHomeConfiguration =
         hostName:
         home-manager.lib.homeManagerConfiguration {
@@ -49,6 +50,18 @@
             nixvim.homeModules.nixvim
           ];
         };
+
+      treefmtEval = treefmt-nix.lib.evalModule pkgs {
+        projectRootFile = "flake.nix";
+
+        programs.nixfmt.enable = true;
+        programs.shfmt.enable = true;
+        programs.stylua.enable = true;
+
+        settings.global.excludes = [
+          "result/**"
+        ];
+      };
     in
     {
       nixosConfigurations = mkConfigurations (
@@ -56,5 +69,9 @@
       );
 
       homeConfigurations = mkConfigurations buildHomeConfiguration;
+
+      formatter.${system} = treefmtEval.config.build.wrapper;
+
+      checks.${system}.formatting = treefmtEval.config.build.check self;
     };
 }
