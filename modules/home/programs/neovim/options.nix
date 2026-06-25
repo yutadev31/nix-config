@@ -66,5 +66,13 @@
 
       shell = "fish";
     };
+
+    extraConfigLua = ''
+      vim.api.nvim_create_autocmd("InsertLeave", {
+        callback = function()
+          vim.fn.jobstart({ "fcitx5-remote", "-c" }, { detach = true })
+        end,
+      })
+    '';
   };
 }
