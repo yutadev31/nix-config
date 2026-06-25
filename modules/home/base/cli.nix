@@ -98,6 +98,7 @@
     enable = true;
     clock24 = true;
     terminal = "xterm-256color";
+    prefix = "C-a";
     mouse = true;
     keyMode = "vi";
     historyLimit = 10000;
