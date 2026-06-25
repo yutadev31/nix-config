@@ -8,20 +8,20 @@
 
 #waybar {
   background: transparent;
-  color: #c9ccd9;
+  color: #dbdff0;
 }
 
 #workspaces button {
   padding: 2px 8px;
   margin: 0 2px;
-  background: #222433;
-  color: #b8c3ff;
+  background: #171926;
+  color: #dbdff0;
   border-radius: 8px;
 }
 
 #workspaces button.active {
-  background: #b8c3ff;
-  color: #222433;
+  background: #20bc88;
+  color: #0f111a;
 }
 
 #window,
@@ -32,7 +32,12 @@
 #pulseaudio,
 #clock {
   padding: 2px 12px;
-  background: #222433;
-  color: #b8c3ff;
+  background: #171926;
+  color: #dbdff0;
+  border: 1px solid #394060;
   border-radius: 8px;
+}
+
+#workspaces button:hover {
+  background: #31385d;
 }

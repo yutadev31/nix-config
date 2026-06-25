@@ -1,8 +1,11 @@
 * {
-  bg: #222433;
-  bg-alt: #3b3e57;
-  fg: #b8c3ff;
-  red: #f2a2a2;
+  bg: #0f111a;
+  surface: #171926;
+  border: #394060;
+  selection: #31385d;
+  fg: #dbdff0;
+  accent: #20bc88;
+  red: #ef6b73;
 
   background-color: transparent;
 }
@@ -11,9 +14,9 @@ window {
   location: center;
   anchor: center;
   width: 520px;
-  background-color: @bg;
+  background-color: @surface;
   border: 1px;
-  border-color: @bg-alt;
+  border-color: @border;
   border-radius: 10px;
   padding: 10px;
 }
@@ -24,18 +27,20 @@ mainbox {
 }
 
 inputbar {
-  background-color: @bg-alt;
+  background-color: @bg;
   border-radius: 8px;
   padding: 6px 10px;
   spacing: 8px;
+  border: 1px solid;
+  border-color: @border;
 }
 
 prompt {
-  text-color: @fg;
+  text-color: @accent;
 }
 
 textbox-prompt-colon {
-  text-color: @fg;
+  text-color: @accent;
 }
 
 entry {
@@ -65,7 +70,7 @@ element alternate {
 }
 
 element selected {
-  background-color: @bg-alt;
+  background-color: @selection;
   text-color: @fg;
 }
 
@@ -79,14 +84,18 @@ element-text {
 }
 
 message {
-  background-color: @bg-alt;
+  background-color: @bg;
+  border: 1px solid;
+  border-color: @border;
   border-radius: 8px;
   padding: 8px;
 }
 
 error-message {
-  background-color: @bg-alt;
+  background-color: @bg;
   text-color: @red;
+  border: 1px solid;
+  border-color: @red;
   border-radius: 8px;
   padding: 8px;
 }
