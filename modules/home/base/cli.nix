@@ -98,6 +98,30 @@
     enable = true;
     clock24 = true;
     terminal = "xterm-256color";
+    mouse = true;
+    keyMode = "vi";
+    historyLimit = 10000;
+    baseIndex = 1;
+    escapeTime = 0;
+
+    extraConfig = ''
+      # Reload config
+      bind r source-file ~/.config/tmux/tmux.conf \; display-message "tmux reloaded"
+
+      # Splits
+      bind | split-window -h
+      bind - split-window -v
+
+      # Vim-like pane movement
+      bind h select-pane -L
+      bind j select-pane -D
+      bind k select-pane -U
+      bind l select-pane -R
+
+      # Better colors
+      set -g default-terminal "tmux-256color"
+      set -ga terminal-overrides ",xterm-256color:Tc"
+    '';
   };
 
   # Fzf
