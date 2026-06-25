@@ -17,6 +17,7 @@
       ];
       modules-right = [
         "tray"
+        "memory"
         "battery"
         "pulseaudio"
         "clock"
@@ -26,6 +27,10 @@
       };
       tray = {
         spacing = 4;
+      };
+      memory = {
+        format = "{}%  ";
+        interval = 5;
       };
       battery = {
         states = {
