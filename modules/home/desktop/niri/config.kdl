@@ -73,9 +73,9 @@ layout {
         // off
 
         width 2
-        active-color "#20bc88"
-        inactive-color "#8b91aa"
-        urgent-color "#ef6b73"
+        active-color "#7aa2f7"
+        inactive-color "#414868"
+        urgent-color "#f7768e"
     }
 
     shadow {

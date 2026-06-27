@@ -15,9 +15,8 @@
   # Btop (top)
   programs.btop = {
     enable = true;
-    themes.yoru = ./btop/yoru.theme;
     settings = {
-      color_theme = "yoru";
+      color_theme = "tokyo-storm";
       theme_background = false;
       vim_keys = true;
     };

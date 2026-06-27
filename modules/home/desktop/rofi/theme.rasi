@@ -1,21 +1,21 @@
 * {
-  bg: #0f111a;
-  surface: #171926;
-  border: #394060;
-  selection: #31385d;
-  fg: #dbdff0;
-  accent: #20bc88;
-  red: #ef6b73;
-
+  bg: #1a1b26;
+  bg-alt: #16161e;
+  fg: #c0caf5;
+  fg-alt: #a9b1d6;
+  accent: #7aa2f7;
+  border: #3d59a1;
+  
   background-color: transparent;
+  text-color: @fg;
 }
 
 window {
   location: center;
   anchor: center;
   width: 520px;
-  background-color: @surface;
-  border: 1px;
+  background-color: @bg;
+  border: 2px;
   border-color: @border;
   border-radius: 10px;
   padding: 10px;
@@ -27,12 +27,11 @@ mainbox {
 }
 
 inputbar {
-  background-color: @bg;
+  background-color: @bg-alt;
   border-radius: 8px;
   padding: 6px 10px;
   spacing: 8px;
-  border: 1px solid;
-  border-color: @border;
+  children: [ "prompt", "entry" ];
 }
 
 prompt {
@@ -41,12 +40,12 @@ prompt {
 
 textbox-prompt-colon {
   text-color: @accent;
+  font: "bold 12";
 }
 
 entry {
   text-color: @fg;
-  placeholder: "Search";
-  placeholder-color: @fg;
+  placeholder: "Search...";
 }
 
 listview {
@@ -54,24 +53,23 @@ listview {
   columns: 1;
   fixed-height: false;
   spacing: 6px;
+  cycle: true;
 }
 
 element {
+  background-color: transparent;
   padding: 6px 8px;
   border-radius: 8px;
+  spacing: 10px;
 }
 
-element normal {
-  text-color: @fg;
+element normal.normal {
+  text-color: @fg-alt;
 }
 
-element alternate {
-  text-color: @fg;
-}
-
-element selected {
-  background-color: @selection;
-  text-color: @fg;
+element selected.normal {
+  background-color: @bg-alt;
+  text-color: @accent;
 }
 
 element-icon {
@@ -81,21 +79,4 @@ element-icon {
 
 element-text {
   text-color: inherit;
-}
-
-message {
-  background-color: @bg;
-  border: 1px solid;
-  border-color: @border;
-  border-radius: 8px;
-  padding: 8px;
-}
-
-error-message {
-  background-color: @bg;
-  text-color: @red;
-  border: 1px solid;
-  border-color: @red;
-  border-radius: 8px;
-  padding: 8px;
 }

@@ -52,11 +52,9 @@
       };
       addons = {
         classicui.globalSection = {
-          Theme = "ink-and-frost";
+          Theme = "Tokyonight-Storm";
         };
       };
     };
   };
-
-  home.file.".local/share/fcitx5/themes/ink-and-frost/theme.conf".source = ./theme.conf;
 }
