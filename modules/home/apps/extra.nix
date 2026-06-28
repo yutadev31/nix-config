@@ -5,7 +5,7 @@
     gimp
     inkscape
     qgis
-    # voicevox
+    voicevox
     kdePackages.kdenlive
     blender
     jetbrains.idea
