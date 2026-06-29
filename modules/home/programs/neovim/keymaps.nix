@@ -15,6 +15,15 @@ in
     (normal "<leader>tt" "<cmd>ToggleTerm<cr>" "Open terminal")
     (terminal "<ESC>" "<C-\\><C-n>")
 
+    (normal "K" "<cmd>lua vim.lsp.buf.hover()<CR>" "LSP Hover")
+    (normal "gd" "<cmd>lua vim.lsp.buf.definition()<CR>" "")
+    (normal "gD" "<cmd>lua vim.lsp.buf.declaration()<CR>" "")
+    (normal "gi" "<cmd>lua vim.lsp.buf.implementation()<CR>" "")
+    (normal "gr" "<cmd>lua vim.lsp.buf.references()<CR>" "")
+    (normal "go" "<cmd>lua vim.lsp.buf.type_definition()<CR>" "")
+    (normal "<leader>rn" "<cmd>lua vim.lsp.buf.rename()<CR>" "LSP Rename")
+    (normal "<leader>ca" "<cmd>lua vim.lsp.buf.code_action()<CR>" "LSP Code Action")
+
     (normal "<leader>ff" "<cmd>Telescope find_files<CR>" "Find files")
     (normal "<leader>fg" "<cmd>Telescope live_grep<CR>" "Live grep")
     (normal "<leader>fb" "<cmd>Telescope buffers<CR>" "Find buffers")
