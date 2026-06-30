@@ -3,6 +3,7 @@
   imports = [
     ../programs/alacritty
     ../programs/vscodium
+    ./desktop-entries.nix
   ];
 
   home.packages = with pkgs; [

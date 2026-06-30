@@ -93,6 +93,9 @@
         clangd = {
           enable = true;
         };
+        cmake = {
+          enable = true;
+        };
         zls = {
           enable = true;
         };
