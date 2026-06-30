@@ -1,6 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-26.05";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -19,6 +20,7 @@
     inputs@{
       self,
       nixpkgs,
+      nixpkgs-stable,
       home-manager,
       rust-overlay,
       nixvim,
@@ -32,6 +34,7 @@
         inherit system;
         overlays = [ rust-overlay.overlays.default ];
       };
+      stable-pkgs = nixpkgs-stable.legacyPackages.${system};
       hostNames = [
         "laptop2"
         "laptop3"
@@ -65,7 +68,7 @@
     in
     {
       nixosConfigurations = mkConfigurations (
-        hostName: nixpkgs.lib.nixosSystem { modules = [ (./. + "/hosts/${hostName}") ]; }
+        hostName: stable-pkgs.lib.nixosSystem { modules = [ (./. + "/hosts/${hostName}") ]; }
       );
 
       homeConfigurations = mkConfigurations buildHomeConfiguration;
