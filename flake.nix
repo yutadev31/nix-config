@@ -34,7 +34,6 @@
         inherit system;
         overlays = [ rust-overlay.overlays.default ];
       };
-      stable-pkgs = nixpkgs-stable.legacyPackages.${system};
       hostNames = [
         "laptop2"
         "laptop3"
@@ -68,7 +67,7 @@
     in
     {
       nixosConfigurations = mkConfigurations (
-        hostName: stable-pkgs.lib.nixosSystem { modules = [ (./. + "/hosts/${hostName}") ]; }
+        hostName: nixpkgs-stable.lib.nixosSystem { modules = [ (./. + "/hosts/${hostName}") ]; }
       );
 
       homeConfigurations = mkConfigurations buildHomeConfiguration;
