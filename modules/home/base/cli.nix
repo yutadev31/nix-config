@@ -3,6 +3,7 @@
   home.packages = with pkgs; [
     codex
     cspell
+    fastfetch
     # gping
     # onefetch
     # zellij
