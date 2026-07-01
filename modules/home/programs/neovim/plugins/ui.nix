@@ -99,6 +99,22 @@
       enable = true;
     };
 
+    plugins.aerial = {
+      enable = true;
+
+      settings = {
+        layout = {
+          defaultDirection = "prefer_right";
+          minWidth = 30;
+        };
+
+        attachMode = "global";
+
+        showGuides = true;
+        filterKind = false;
+      };
+    };
+
     extraConfigLua = ''
       vim.notify = require("mini.notify").make_notify()
     '';

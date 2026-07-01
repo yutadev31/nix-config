@@ -37,5 +37,9 @@ in
     (normal "<leader>xq" "<cmd>Trouble qflist toggle<CR>" "Quickfix")
     (normal "<leader>xl" "<cmd>Trouble loclist toggle<CR>" "Location List")
     (normal "<leader>xt" "<cmd>Trouble todo toggle<CR>" "Todo")
+
+    (normal "<leader>a" "<cmd>AerialToggle!<CR>" "Toggle Aerial")
+    (normal "{" "<cmd>AerialPrev<CR>" "")
+    (normal "}" "<cmd>AerialNext<CR>" "")
   ];
 }
