@@ -10,8 +10,8 @@
   systemd.user.services.polkit-gnome-agent = {
     Unit = {
       Description = "Polkit GNOME Authentication Agent";
-      After = [ "niri.service" ];
-      PartOf = [ "niri.service" ];
+      After = [ "graphical-session.target" ];
+      PartOf = [ "graphical-session.target" ];
     };
 
     Service = {
@@ -20,7 +20,7 @@
     };
 
     Install = {
-      WantedBy = [ "niri.service" ];
+      WantedBy = [ "graphical-session.target" ];
     };
   };
 }
