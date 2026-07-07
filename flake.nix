@@ -14,6 +14,10 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    fcitx5-remote-input = {
+      url = "github:yutadev31/fcitx5-remote-input";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     treefmt-nix.url = "github:numtide/treefmt-nix";
   };
   outputs =
