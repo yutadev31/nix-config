@@ -39,8 +39,23 @@
     plugins.lsp = {
       enable = true;
       servers = {
-        nil_ls = {
+        nixd = {
           enable = true;
+          settings = {
+            nixd = {
+              nixpkgs = {
+                expr = "import <nixpkgs> { }";
+              };
+              options = {
+                nixos = {
+                  expr = "(builtins.getFlake (toString ./.)).nixosConfigurations.<hostname>.options";
+                };
+                home_manager = {
+                  expr = "(builtins.getFlake (toString ./.)).homeConfigurations.\"<username>@<hostname>\".options";
+                };
+              };
+            };
+          };
         };
         pyright = {
           enable = true;
@@ -97,6 +112,9 @@
           enable = true;
         };
         zls = {
+          enable = true;
+        };
+        typos_lsp = {
           enable = true;
         };
       };
