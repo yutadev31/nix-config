@@ -17,13 +17,34 @@
       enable = true;
       settings = {
         formatters_by_ft = {
-          html = [ "biome-check" ];
-          css = [ "biome-check" ];
-          json = [ "biome-check" ];
-          javascript = [ "biome-check" ];
-          javascriptreact = [ "biome-check" ];
-          typescript = [ "biome-check" ];
-          typescriptreact = [ "biome-check" ];
+          html = [
+            "biome-check"
+            "oxfmt"
+          ];
+          css = [
+            "biome-check"
+            "oxfmt"
+          ];
+          json = [
+            "biome-check"
+            "oxfmt"
+          ];
+          javascript = [
+            "biome-check"
+            "oxfmt"
+          ];
+          javascriptreact = [
+            "biome-check"
+            "oxfmt"
+          ];
+          typescript = [
+            "biome-check"
+            "oxfmt"
+          ];
+          typescriptreact = [
+            "biome-check"
+            "oxfmt"
+          ];
           nix = [ "nixfmt" ];
           go = [ "gofmt" ];
           asm = [ "asmfmt" ];
