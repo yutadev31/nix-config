@@ -10,9 +10,11 @@
       margin-top = 4;
       margin-right = 8;
       modules-left = [
+        "sway/workspaces"
         "niri/workspaces"
       ];
       modules-center = [
+        "sway/window"
         "niri/window"
       ];
       modules-right = [
@@ -22,6 +24,9 @@
         "pulseaudio"
         "clock"
       ];
+      "sway/workspaces" = {
+        all-outputs = true;
+      };
       "niri/workspaces" = {
         all-outputs = true;
       };

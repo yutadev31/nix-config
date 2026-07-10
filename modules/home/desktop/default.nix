@@ -5,6 +5,7 @@
     ./keyring.nix
     ./niri
     ./rofi
+    ./sway
     ./swaync
     ./theme.nix
     ./waybar

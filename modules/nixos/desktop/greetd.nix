@@ -3,7 +3,7 @@
     enable = true;
     settings = {
       default_session = {
-        command = "niri-session";
+        command = "sway";
         user = "yuta";
       };
     };

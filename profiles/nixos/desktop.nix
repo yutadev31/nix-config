@@ -6,5 +6,6 @@
     ../../modules/nixos/desktop/fonts.nix
     ../../modules/nixos/desktop/greetd.nix
     ../../modules/nixos/desktop/niri.nix
+    ../../modules/nixos/desktop/sway.nix
   ];
 }

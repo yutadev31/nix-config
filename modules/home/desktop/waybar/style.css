@@ -14,14 +14,13 @@
 #workspaces button {
   padding: 2px 8px;
   margin: 0 2px;
-  background: #24283b;
+  background: transparent;
   color: #c0caf5;
   border-radius: 8px;
 }
 
 #workspaces button.active {
-  background: #7aa2f7;
-  color: #24283b;
+  color: #7aa2f7;
 }
 
 #window,
@@ -32,7 +31,6 @@
 #pulseaudio,
 #clock {
   padding: 2px 12px;
-  background: #24283b;
   color: #c0caf5;
   border-radius: 8px;
 }
