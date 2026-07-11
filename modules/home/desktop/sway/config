@@ -13,6 +13,7 @@ bindsym $mod+Return exec $term
 bindsym $mod+q kill
 
 bindsym $mod+d exec $menu
+bindsym $mod+n exec swaync-client -t -sw
 
 floating_modifier $mod normal
 
@@ -98,6 +99,13 @@ mode "resize" {
 
 input * {
   xkb_layout "jp"
+  xkb_options "ctrl:nocaps,compose:ralt"
+}
+
+input "type:touchpad" {
+    tap enabled
+    natural_scroll enabled
+    dwt enabled
 }
 
 default_border pixel 3
@@ -113,6 +121,8 @@ client.urgent           #f7768e #000000 #ffffff #f7768e #f7768e
 
 bindsym $mod+r mode "resize"
 
+exec systemctl --user import-environment WAYLAND_DISPLAY SWAYSOCK; systemctl --user start sway-session.target
+
 exec waybar
 exec fcitx5 -dr
 
@@ -121,7 +131,6 @@ output eDP-1 pos 0 1080
 
 workspace 1 output HDMI-A-1
 workspace 2 output HDMI-A-1
-workspace 3 output HDMI-A-1
+workspace 3 output eDP-1
 workspace 4 output eDP-1
 workspace 5 output eDP-1
-workspace 6 output eDP-1

@@ -6,6 +6,8 @@
     ./niri
     ./rofi
     ./sway
+    ./swayidle
+    ./swaylock
     ./swaync
     ./theme.nix
     ./waybar
