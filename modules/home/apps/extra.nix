@@ -4,8 +4,8 @@
     vlc
     gimp
     inkscape
-    qgis
-    voicevox
+    # qgis
+    # voicevox
     kdePackages.kdenlive
     blender
     jetbrains.idea
