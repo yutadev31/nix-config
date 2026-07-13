@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
   home.packages = with pkgs; [
     vlc
@@ -11,6 +11,7 @@
     jetbrains.idea
     anki-bin
     zed-editor
+    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
   programs.google-chrome.enable = true;
