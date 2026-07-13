@@ -1,7 +1,4 @@
-{ inputs, pkgs, ... }:
-let
-  remoteInput = inputs.fcitx5-remote-input.packages.${pkgs.system}.default;
-in
+{ pkgs, ... }:
 {
   i18n.inputMethod = {
     enable = true;
@@ -12,7 +9,6 @@ in
       qt6Packages.fcitx5-chinese-addons
       fcitx5-gtk
       fcitx5-tokyonight
-      remoteInput
     ];
     fcitx5.settings = {
       globalOptions = {
@@ -61,30 +57,4 @@ in
       };
     };
   };
-
-  home.packages = [ remoteInput ];
-
-  systemd.user.services.fcitx5-remote-input = {
-    Unit = {
-      Description = "Fcitx5 Remote Input daemon";
-      After = [ "graphical-session.target" ];
-      PartOf = [ "graphical-session.target" ];
-    };
-
-    Service = {
-      ExecStart = "${remoteInput}/bin/fcitx5-remote-input-service";
-      Restart = "on-failure";
-      RestartSec = 2;
-      Environment = [
-        "FCITX5_REMOTE_INPUT_BIND=0.0.0.0:8080"
-        "FCITX5_REMOTE_INPUT_PUBLIC_HOST=192.168.11.100"
-        "FCITX5_REMOTE_INPUT_SOCKET=/tmp/fcitx5-remote-input.sock"
-      ];
-    };
-
-    Install = {
-      WantedBy = [ "default.target" ];
-    };
-  };
-
 }
