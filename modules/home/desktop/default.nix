@@ -26,6 +26,7 @@
     xwayland-satellite
     xdg-desktop-portal-gtk
     xdg-desktop-portal-gnome
+    xdg-desktop-portal-wlr
     easyeffects
     awww
     cliphist

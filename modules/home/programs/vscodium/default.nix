@@ -9,7 +9,6 @@
         pkief.material-icon-theme
 
         ms-vscode-remote.remote-ssh
-        leonardssh.vscord
 
         yzhang.markdown-all-in-one
         davidanson.vscode-markdownlint
