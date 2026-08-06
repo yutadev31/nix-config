@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 {
   home.pointerCursor = {
     enable = true;
@@ -10,15 +10,6 @@
 
   gtk = {
     enable = true;
-    theme = {
-      package = pkgs.vimix-gtk-themes;
-      name = "Vimix-dark-doder";
-    };
-    iconTheme = {
-      package = pkgs.vimix-icon-theme;
-      name = "Vimix-doder-dark";
-    };
-    gtk4.theme = config.gtk.theme;
   };
 
   dconf.settings = {
