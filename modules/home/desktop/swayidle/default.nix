@@ -1,14 +1,23 @@
 { pkgs, ... }:
 let
-  lock = "${pkgs.swaylock}/bin/swaylock --daemonize";
-  display = status: "${pkgs.sway}/bin/swaymsg 'output * power ${status}'";
+  lock = "${pkgs.hyprlock}/bin/hyprlock";
+  display = status: ''
+    case "$XDG_CURRENT_DESKTOP" in
+      Hyprland)
+        ${pkgs.hyprland}/bin/hyprctl dispatch dpms ${status}
+        ;;
+      *)
+        ${pkgs.sway}/bin/swaymsg 'output * power ${status}'
+        ;;
+    esac
+  '';
 in
 {
   services.swayidle = {
     enable = true;
     timeouts = [
       {
-        timeout = 30;
+        timeout = 120;
         command = lock;
       }
       {

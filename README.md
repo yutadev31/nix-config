@@ -58,12 +58,12 @@ home-manager switch --flake .#laptop2
 - `modules/nixos/`
   - Reusable system modules
   - `base/`: boot, user, ssh, nix, tools, network defaults
-  - `desktop/`: niri + greetd + pipewire + fonts + browser-related system config
+  - `desktop/`: Hyprland, Niri, Sway, greetd, PipeWire, fonts, and browser-related system config
   - `dev/`: Android, Docker, Ollama
 - `modules/home/`
   - Reusable user modules
   - `base/`: CLI, fish, shared user defaults
-  - `desktop/`: niri, waybar, swaync, rofi, fcitx5, theme
+  - `desktop/`: Hyprland, Niri, Sway, Waybar, swaync, rofi, fcitx5, theme
   - `apps/`: shared GUI app set and optional extras
   - `programs/`: per-program config such as neovim, alacritty, vscodium
   - `dev/`, `games/`: focused package groups
@@ -82,5 +82,6 @@ home-manager switch --flake .#laptop2
 ## Notes
 
 - `modules/home/desktop/niri/` switches `outputs-<host>.kdl` per host via `hostName`.
+- Sway remains the default greetd session; start `Hyprland` explicitly to use its configuration.
 - Extra GUI apps are isolated in `profiles/home/extra-apps.nix` and enabled on `laptop2`.
 - Alacritty colors theme name: Ink & Frost  (see `docs/colors.md`).

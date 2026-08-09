@@ -3,7 +3,7 @@
     enable = true;
     settings = {
       default_session = {
-        command = "sway";
+        command = "start-hyprland";
         user = "yuta";
       };
     };

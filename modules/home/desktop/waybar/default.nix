@@ -10,10 +10,12 @@
       margin-top = 4;
       margin-right = 8;
       modules-left = [
+        "hyprland/workspaces"
         "sway/workspaces"
         "niri/workspaces"
       ];
       modules-center = [
+        "hyprland/window"
         "sway/window"
         "niri/window"
       ];
@@ -25,6 +27,9 @@
         "clock"
       ];
       "sway/workspaces" = {
+        all-outputs = true;
+      };
+      "hyprland/workspaces" = {
         all-outputs = true;
       };
       "niri/workspaces" = {

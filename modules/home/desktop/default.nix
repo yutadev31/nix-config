@@ -2,13 +2,15 @@
 {
   imports = [
     ./fcitx5
+    ./hyprland
+    ./hyprlock
     ./keyring.nix
-    ./niri
+    # ./niri
     ./rofi
-    ./sway
+    # ./sway
     ./swayidle
-    ./swaylock
-    ./swaync
+    # ./swaylock
+    # ./swaync
     ./theme.nix
     ./waybar
   ];
@@ -18,6 +20,7 @@
     xdg-utils
     dconf
     wl-clipboard
+    grim
     playerctl
     pavucontrol
     brightnessctl
