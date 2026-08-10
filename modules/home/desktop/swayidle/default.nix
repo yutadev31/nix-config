@@ -1,16 +1,7 @@
 { pkgs, ... }:
 let
   lock = "${pkgs.hyprlock}/bin/hyprlock";
-  display = status: ''
-    case "$XDG_CURRENT_DESKTOP" in
-      Hyprland)
-        ${pkgs.hyprland}/bin/hyprctl dispatch dpms ${status}
-        ;;
-      *)
-        ${pkgs.sway}/bin/swaymsg 'output * power ${status}'
-        ;;
-    esac
-  '';
+  display = status: "";
 in
 {
   services.swayidle = {

@@ -10,7 +10,7 @@
       cl = "clear";
 
       # LS
-      ls = "eza --icons";
+      ls = "eza --icons auto";
       l = "ls";
       sl = "ls";
       ll = "ls -l";
