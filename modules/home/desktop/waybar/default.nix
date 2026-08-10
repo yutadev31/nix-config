@@ -6,9 +6,6 @@
       layer = "top";
       position = "top";
       spacing = 8;
-      margin-left = 8;
-      margin-top = 4;
-      margin-right = 8;
       modules-left = [
         "hyprland/workspaces"
         "sway/workspaces"

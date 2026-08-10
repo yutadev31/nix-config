@@ -7,12 +7,12 @@
 }
 
 #waybar {
-  background: transparent;
+  background: #24283b;
   color: #c0caf5;
 }
 
 #workspaces button {
-  padding: 2px 8px;
+  padding: 4px 8px;
   margin: 0 2px;
   background: transparent;
   color: #c0caf5;
@@ -30,7 +30,7 @@
 #battery,
 #pulseaudio,
 #clock {
-  padding: 2px 12px;
+  padding: 4px 12px;
   color: #c0caf5;
   border-radius: 8px;
 }
