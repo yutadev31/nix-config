@@ -8,7 +8,7 @@
     # ./niri
     ./rofi
     # ./sway
-    ./swayidle
+    # ./swayidle
     # ./swaylock
     # ./swaync
     ./theme.nix
