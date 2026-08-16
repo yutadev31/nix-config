@@ -21,6 +21,7 @@
     dconf
     wl-clipboard
     grim
+    slurp
     playerctl
     pavucontrol
     brightnessctl

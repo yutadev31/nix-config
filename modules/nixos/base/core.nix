@@ -18,6 +18,32 @@
 
   # Nix ld
   programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    glib
+    nspr
+    nss
+    at-spi2-atk
+    dbus
+    cups
+    expat
+    libxcb
+    libxkbcommon
+    alsa-lib
+    mesa
+    libx11
+    libxext
+    cairo
+    pango
+    systemd
+    libxcomposite
+    libxdamage
+    libxfixes
+    libxrandr
+    at-spi2-core
+    gdk-pixbuf
+    gtk3
+    libgbm
+  ];
 
   # Sudo
   security.sudo = {
