@@ -49,6 +49,7 @@
           go = [ "gofmt" ];
           asm = [ "asmfmt" ];
           make = [ "bake" ];
+          python = [ "black" ];
         };
         format_on_save = {
           timeout_ms = 2000;
