@@ -1,5 +1,18 @@
+{ pkgs, ... }:
+let
+  waybar-git = pkgs.waybar.overrideAttrs (old: {
+    version = "0.15.0";
+    src = pkgs.fetchFromGitHub {
+      owner = "Alexays";
+      repo = "Waybar";
+      rev = "aacf0cbc995d9341b71ad8324969427b3967cca1";
+      hash = "sha256-sBBQAR0SF9vjJWiEHBsHV33RlAO5GYiFpTcTZXapqqA=";
+    };
+  });
+in
 {
   programs.waybar = {
+    package = waybar-git;
     enable = true;
     settings.main = {
       reload_style_on_change = true;

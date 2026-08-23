@@ -35,16 +35,6 @@
     extraOptions = [ "--icons" ];
   };
 
-  # Delta (diff)
-  programs.delta = {
-    enable = true;
-    enableGitIntegration = true;
-    options = {
-      side-by-side = true;
-      navigate = true;
-    };
-  };
-
   # Git
   programs.git = {
     enable = true;
