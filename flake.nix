@@ -44,7 +44,6 @@
       };
       hostNames = [
         "laptop2"
-        "laptop3"
       ];
       mkConfigurations = builder: lib.genAttrs hostNames (hostName: builder hostName);
       buildHomeConfiguration =
