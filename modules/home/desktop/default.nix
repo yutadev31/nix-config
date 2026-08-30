@@ -19,21 +19,17 @@
     xdg-user-dirs
     xdg-utils
     dconf
-    wl-clipboard
+    wl-clipboard # includes wl-copy & wl-paste
     grim
     slurp
     playerctl
     pavucontrol
     brightnessctl
     hyprpicker
-    libnotify
-    xwayland-satellite
+    libnotify # includes notify-send
     xdg-desktop-portal-gtk
     xdg-desktop-portal-gnome
     xdg-desktop-portal-wlr
-    easyeffects
-    awww
-    cliphist
   ];
 
   services.gammastep = {

@@ -2,15 +2,15 @@
 {
   home.packages = with pkgs; [
     vlc
-    gimp
-    inkscape
+    # gimp
+    # inkscape
     # qgis
     # voicevox
-    kdePackages.kdenlive
-    blender
+    # kdePackages.kdenlive
+    # blender
     jetbrains.idea
-    anki-bin
-    zed-editor
+    # anki-bin
+    # zed-editor
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 

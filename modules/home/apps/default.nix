@@ -11,7 +11,6 @@
     discord
     slack
     nemo
-    obsidian
   ];
   services.syncthing.enable = true;
 }

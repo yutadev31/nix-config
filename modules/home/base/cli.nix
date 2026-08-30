@@ -3,14 +3,7 @@
   home.packages = with pkgs; [
     codex
     fastfetch
-    # gping
-    # onefetch
-    # zellij
-    # delta
   ];
-
-  # Bat (cat)
-  programs.bat.enable = true;
 
   # Btop (top)
   programs.btop = {
@@ -48,87 +41,13 @@
   };
 
   # GitHub CLI
-  programs.gh = {
-    enable = true;
-    settings = {
-      editor = "nvim";
-    };
-  };
+  programs.gh.enable = true;
 
   # Lazygit
-  programs.lazygit = {
-    enable = true;
-    settings = { };
-  };
-
-  # Helix
-  programs.helix = {
-    enable = true;
-
-    settings = {
-      theme = "onedark";
-      editor = {
-        cursor-shape = {
-          normal = "block";
-          insert = "bar";
-          select = "underline";
-        };
-        file-picker = {
-          hidden = false;
-        };
-      };
-    };
-    languages.language = [
-      {
-        name = "nix";
-        auto-format = true;
-      }
-      {
-        name = "rust";
-        auto-format = true;
-      }
-      {
-        name = "toml";
-        auto-format = true;
-      }
-    ];
-  };
-
-  # Tmux
-  programs.tmux = {
-    enable = true;
-    clock24 = true;
-    terminal = "xterm-256color";
-    prefix = "C-a";
-    mouse = true;
-    keyMode = "vi";
-    historyLimit = 10000;
-    baseIndex = 1;
-    escapeTime = 0;
-
-    extraConfig = ''
-      # Reload config
-      bind r source-file ~/.config/tmux/tmux.conf \; display-message "tmux reloaded"
-
-      # Splits
-      bind | split-window -h
-      bind - split-window -v
-
-      # Vim-like pane movement
-      bind h select-pane -L
-      bind j select-pane -D
-      bind k select-pane -U
-      bind l select-pane -R
-
-      # Better colors
-      set -g default-terminal "tmux-256color"
-      set -ga terminal-overrides ",xterm-256color:Tc"
-    '';
-  };
+  programs.lazygit.enable = true;
 
   # Fzf
   programs.fzf = {
     enable = true;
-    enableFishIntegration = true;
   };
 }
