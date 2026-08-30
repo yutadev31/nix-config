@@ -1,17 +1,17 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 {
   home.packages = with pkgs; [
-    vlc
     # gimp
     # inkscape
     # qgis
     # voicevox
     # kdePackages.kdenlive
     # blender
-    jetbrains.idea
     # anki-bin
     # zed-editor
-    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+    vlc
+    brave
+    jetbrains.idea
   ];
 
   programs.google-chrome.enable = true;

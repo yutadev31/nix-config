@@ -1,13 +1,12 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
   imports = [
     ../programs/alacritty
     ../programs/vscodium
-    ./desktop-entries.nix
   ];
 
   home.packages = with pkgs; [
-    brave
+    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     discord
     slack
     nemo
