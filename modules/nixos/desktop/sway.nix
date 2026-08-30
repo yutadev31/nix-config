@@ -5,8 +5,12 @@
     wrapperFeatures.gtk = true;
   };
 
-  xdg.portal.wlr.settings.screencast = {
-    chooser_type = "simple";
-    chooser_cmd = "${pkgs.slurp}/bin/slurp -f 'Monitor: %o' -or";
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-wlr ];
+    wlr.settings.screencast = {
+      chooser_type = "simple";
+      chooser_cmd = "${pkgs.slurp}/bin/slurp -f 'Monitor: %o' -or";
+    };
   };
 }

@@ -25,7 +25,6 @@
   programs.eza = {
     enable = true;
     enableFishIntegration = true;
-    extraOptions = [ "--icons" ];
   };
 
   # Git

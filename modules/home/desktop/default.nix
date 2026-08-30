@@ -29,7 +29,6 @@
     libnotify # includes notify-send
     xdg-desktop-portal-gtk
     xdg-desktop-portal-gnome
-    xdg-desktop-portal-wlr
   ];
 
   services.gammastep = {
