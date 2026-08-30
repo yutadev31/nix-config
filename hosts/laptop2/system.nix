@@ -3,7 +3,7 @@
   boot.kernelParams = [
     "amd_pstate=active"
   ];
-  boot.tmpOnTmpfs = true;
+  boot.tmp.useTmpfs = true;
 
   environment.systemPackages = with pkgs; [
     piper
